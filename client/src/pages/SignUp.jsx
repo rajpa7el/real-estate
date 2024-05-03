@@ -28,9 +28,9 @@ export default function SignUp() {
       });
 
       const data = await res.json();
-      if (!data.success) {
+      if (data.success === false) {
         setLoading(false);
-        setError(data.message || 'Failed to Sign Up');
+        setError(data.message);
         return;
       }
       setLoading(false);
