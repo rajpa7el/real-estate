@@ -1,5 +1,7 @@
-export const test = (req, res) =>{
+const test = (req, res) => {
     res.send({
-        message: "Hello World",
+      message: "Api route is working",
     });
-}
+  };
+  
+module.exports = { test };
